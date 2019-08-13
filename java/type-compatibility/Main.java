@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String args[]) {
-        BaseValue b = BaseValue.produce(1);
+        BaseValue b = BaseValue.of(1);
         System.out.println(b.getClass()); // class BaseValue
 
-        ExtendedValue e = ExtendedValue.produce(1);
+        ExtendedValue e = ExtendedValue.of(1);
         System.out.println(e.getClass()); // class ExtendedValue
     }
 }
@@ -13,7 +13,7 @@ class BaseValue {
         value = value;
     }
 
-    public static BaseValue produce(int value) {
+    public static BaseValue of(int value) {
         return new BaseValue(value);
     }
 }
@@ -23,7 +23,7 @@ class ExtendedValue extends BaseValue {
         super(value);
     }
 
-    public static ExtendedValue produce(int value) {
+    public static ExtendedValue of(int value) {
         return new ExtendedValue(value);
     }
 }
